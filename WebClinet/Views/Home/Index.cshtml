@@ -1,0 +1,30 @@
+﻿
+@model List<EShopApi.Models.Customer>
+@{
+    ViewData["Title"] = "Home Page";
+    int rowCount = 1;
+}
+
+<table class ="table table-bordered"></table>
+<tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Family</th>
+    <th>Email</th>
+    <th>Phone</th>
+</tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <th>@rowCount</th>
+        <th>@item.FirstName</th>
+        <th>@item.LastName</th>
+        <th>@item.Email</th>
+        <th>@item.Phone</th>
+        <td>
+            <a href="#" class="btn btn-warning">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+        </td>
+        rowCunt++;
+    </tr>
+}
